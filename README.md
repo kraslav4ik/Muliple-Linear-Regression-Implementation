@@ -1,7 +1,15 @@
 # Muliple-Linear-Regression-Implementation
 Fun project with my implementation of multiple linear regression from scratch. Visualized with plots.
 
-In this program, I realized the simpliest linear regression model with .fit and .predict methods (both cases, with and without intercept are concidered). Also, program counts RMSE and R2 errors, compare results with the Scikit-learn Linear regression class and visualize this comparison using scatters from MatPlotLib to show a dependency between real and predicted(both ways) values.
+![Example](https://github.com/kraslav4ik/Muliple-Linear-Regression-Implementation/blob/main/plots/Figure_Regression.png)
+
+In this program, I realized the simpliest linear regression model with ```.fit``` and ```.predict``` methods (both cases, with and without intercept are concidered). Also, program counts **RMSE** and **R2** errors, compare results with the Scikit-learn Linear regression class, prints difference and visualize this comparison using scatters from MatPlotLib to show a dependency between real and predicted(both ways) values.
+
+Works with python 3.8
+
+```bash
+pip install -r requirements.txt
+```
 
 ##Launch
 
