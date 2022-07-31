@@ -3,7 +3,7 @@ Fun project with my implementation of multiple linear regression from scratch. V
 
 ![Example](https://github.com/kraslav4ik/Muliple-Linear-Regression-Implementation/blob/main/plots/Figure_non.png)
 
-In this program, I realized the simpliest linear regression model with ```.fit``` and ```.predict``` methods (both cases, with and without intercept are concidered). Also, program counts **RMSE** and **R2** errors, compare results with the Scikit-learn Linear regression class, prints difference and visualize this comparison using scatters from MatPlotLib to show a dependency between real and predicted(both ways) values. Working with ```.csv``` files
+In this program, I created the simpliest linear regression model based on LinAlg equations. It provides ```.fit``` and ```.predict``` methods (both cases, with and without intercept are concidered). Also, program counts **RMSE** and **R2** errors, compare results with the Scikit-learn Linear regression class, prints difference and visualize this comparison using scatters from MatPlotLib to show a dependency between real and predicted(both ways) values. Working with ```.csv``` files
 
 Works with python 3.8
 
