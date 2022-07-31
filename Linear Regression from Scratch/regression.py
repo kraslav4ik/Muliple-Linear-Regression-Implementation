@@ -87,31 +87,25 @@ def main() -> None:
 
     sci_pred = sci_predictions.transpose()[0]
     custom_pred = yhat.transpose()[0]
-
-    fig, axs = plt.subplots(1, 2)
+    fig, ax = plt.subplots()
     fig.suptitle(f'Comparison of predictions by SkLearn Linear regression and My linear regression model\n'
                  f'Intercept = {fit_intercept}')
     fig.set_size_inches(10, 6)
     p1 = max(max(sci_pred), max(dep['y']))
     p2 = min(min(sci_pred), min(dep['y']))
-    axs[0].scatter(dep, sci_pred, c='crimson')
-    axs[0].plot([p1, p2], [p1, p2], 'b-', label='SciLearn')
-    axs[0].set_title('SkLearn')
-    p1cus = max(max(custom_pred), max(dep['y']))
-    p2cus = min(min(custom_pred), min(dep['y']))
-    axs[1].scatter(dep, custom_pred, c='crimson')
-    axs[1].plot([p1cus, p2cus], [p1cus, p2cus], 'y-', label='My model')
-    axs[1].set_title('My_model')
+    ax.scatter(dep, sci_pred, c='g', alpha=0.5, s=35, label='SkLearn linear regression predictions')
+    ax.plot([p1, p2], [p1, p2], 'y')
+    ax.scatter(dep, custom_pred, c='crimson', alpha=0.8, s=5, label='My linear regression predictions')
+    ax.set_yscale('log')
+    ax.set_xscale('log')
+    ax.set_ylabel('Predictions')
+    ax.set_xlabel('True Values')
+    ax.set_aspect('equal', adjustable='box')
 
-    for ax in axs.flat:
-        ax.set(xlabel='True Values', ylabel='Predictions')
-        ax.set_yscale('log')
-        ax.set_xscale('log')
-        ax.set_aspect('equal', adjustable='box')
 
-    for ax in axs.flat:
-        ax.label_outer()
     fig.tight_layout()
+    handles, labels = ax.get_legend_handles_labels()
+    ax.legend(handles, labels)
 
     plt.show()
 
