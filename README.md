@@ -1,4 +1,4 @@
-# Muliple-Linear-Regression-Implementation
+# Multiple-Linear-Regression-Implementation
 Fun project with my implementation of multiple linear regression from scratch. Visualized with plots.
 
 ![Example](https://github.com/kraslav4ik/Muliple-Linear-Regression-Implementation/blob/main/plots/Figure_non.png)
